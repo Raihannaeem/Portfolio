@@ -44,15 +44,15 @@ a:hover{
 
 .mainImg, .image-hover{
     margin: auto;
-    height: 40vw;
+    height: inherit;
 }
 
 .home{
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 40vw;
-    height: 40vw;
+    width: 42vw;
+    height: 42vw;
 }
 
 .image-hover {
@@ -71,7 +71,7 @@ h1{
 .about-div{
     display: flex;
     flex-direction: column;
-    height: 40vw;
+    height: inherit;
     overflow: hidden;
     padding: 0px;
     margin: 0px;
@@ -81,6 +81,39 @@ h1{
     font-size: 1.5vw;
 }
 
+#Frame1{
+    transform: translateX(-30%);
+}
+
+.home:hover #Frame1{
+    scale: 0.4;
+    animation-name: flight;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flight{
+    0%{
+        scale: 0.4;
+        transform: translateX(-30%);
+    }
+    20%{
+        opacity: 1;
+        transform: tanslateX(0%);
+    }
+    99%{
+        opacity: 0.8;
+        scale: 0.4;
+        transform: translateX(200%);
+    }
+    100%{
+        opacity:0;
+        scale:0;
+    }
+}
+
 .home:hover{    
     .image-hover{
         opacity: 1;
@@ -88,7 +121,7 @@ h1{
     .mainImg{
         opacity: 0;
     }
-    width: 80vw;
+    width: 84vw;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -103,7 +136,8 @@ h1{
     transition: ease-in;
     transition-duration: 2s; */
     animation-name: text;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
+    /* animation-timing-function: ease-in-out; */
     animation-fill-mode: forwards;
 }
 
